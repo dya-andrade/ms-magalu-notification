@@ -18,3 +18,17 @@ sudo service mysql stop
 cd docker
 docker-compose up
 ```
+
+* Endpoints
+
+```shell
+curl --request POST \
+  --url http://localhost:8080/notifications \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"dateTime": "2024-07-10T14:54:00",
+	"destination": "dyane.aaraujo@gmail.com",
+	"message": "Seja bem vinda!",
+	"channel": "EMAIL"
+}'
+```

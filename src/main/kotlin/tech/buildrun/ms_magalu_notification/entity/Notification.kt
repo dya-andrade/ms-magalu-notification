@@ -8,16 +8,16 @@ import java.time.LocalDateTime
 data class Notification(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private val notificationId: Long? = null,
-    private val dateTime: LocalDateTime,
-    private val destination: String,
-    private val message: String,
+    val notificationId: Long? = null,
+    val dateTime: LocalDateTime,
+    val destination: String,
+    val message: String,
     @ManyToOne
     @JoinColumn(name = "channel_id")
-    private val channel: Channel,
+    val channel: Channel,
     @ManyToOne
     @JoinColumn(name = "status_id")
-    private val status: Status
+    val status: Status
 )
 
 
