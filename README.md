@@ -32,3 +32,16 @@ curl --request POST \
 	"channel": "EMAIL"
 }'
 ```
+
+```shell
+curl --request GET \
+  --url http://localhost:8080/notifications/1
+```
+
+```shell
+curl --request DELETE \
+  --url http://localhost:8080/notifications/1
+```
+
+* Para saber mais sobre Spring Scheduler:
+  <a href="https://spring.io/guides/gs/scheduling-tasks">Scheduling Tasks</a>

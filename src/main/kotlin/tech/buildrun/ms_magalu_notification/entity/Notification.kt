@@ -12,10 +12,10 @@ data class Notification(
     val dateTime: LocalDateTime,
     val destination: String,
     val message: String,
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "channel_id")
     val channel: Channel,
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "status_id")
     val status: Status
 )

@@ -8,8 +8,8 @@ import jakarta.persistence.Table
 @Table(name = "tb_channel")
 data class Channel(
     @Id
-    private val channelId: Long? = null,
-    private val description: String,
+    val channelId: Long? = null,
+    val description: String,
 ) {
     enum class Values(
         private val id: Long,
